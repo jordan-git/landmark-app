@@ -17,7 +17,7 @@ if ($request_method === 'GET') {
     switch ($request_uri) {
         case '' :
         case '/' :
-            echo $twig->render('index.twig');
+            echo $twig->render('home.twig');
             break;
         case '/about':
             echo $twig->render('about.twig');
