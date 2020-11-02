@@ -7,7 +7,7 @@
     https://thecodedeveloper.com/install-composer-windows-xampp/
 
 2. Run `npm run install`
-3. Run `npm run start`
+3. Run `npm start / npm run start`
 
 ## Information
 

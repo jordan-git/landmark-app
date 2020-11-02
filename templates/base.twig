@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        {% block head %}
-            <link rel="stylesheet" href="../css/style.css" />
-            <title>{% block title %}{% endblock %} - My Webpage</title>
+        {% block css %}
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/style.css" />
         {% endblock %}
+
+        {% block js %}
+        <script src="../js/bootstrap.min.js" defer></script>
+        {% endblock %}
+
+        {% if block('title') is not empty  %}
+        <title>{% block title %}{% endblock %} - WhatsThat</title>
+        {% else %}
+        <title>WhatsThat</title>
+        {% endif %}
     </head>
     <body>
         <main id="content">{% block content %}{% endblock %}</main>
         <footer>
-            {% block footer %} &copy; Copyright 2011 by
-            <a href="#">you</a>. {% endblock %}
+            {% block footer %}{% endblock %}
+            &copy; Copyright 2020 by Team Raspberries.
         </footer>
     </body>
 </html>
