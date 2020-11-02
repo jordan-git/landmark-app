@@ -1,8 +1,15 @@
 {% extends "base.twig" %}
 
+{% block css %}
+    {{ parent() }}
+    <link rel="stylesheet" href="../css/landing.css">
+{% endblock %}
+
 {% block title %}Home{% endblock %}
 
 {% block content %}
-    <h1>Home</h1>
-    <p>Welcome to my awesome homepage.</p>
+    <div id="landing">
+        <h1><a href="/">WhatsThat</a></h1>
+        <p>Welcome to my awesome homepage.</p>
+    </div>
 {% endblock %}

@@ -3,7 +3,7 @@
     <head>
         {% block css %}
         <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/main.css" />
         {% endblock %}
 
         {% block js %}
@@ -19,8 +19,7 @@
     <body>
         <main id="content">{% block content %}{% endblock %}</main>
         <footer>
-            {% block footer %}{% endblock %}
-            &copy; Copyright 2020 by Team Raspberries.
+            <span>&copy; Copyright 2020 by Team Raspberries</span>
         </footer>
     </body>
 </html>

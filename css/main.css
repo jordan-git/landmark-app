@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: lightgreen;
+}
+
+main#content {
+    flex: 1 0;
+    display: flex;
+}
+
+footer {
+    text-align: center;
+}
+
+footer span {
+    font-size: 0.8rem;
+}
