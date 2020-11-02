@@ -1,3 +1,7 @@
+html {
+    font-size: 24px;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -5,15 +9,12 @@ body {
     background: lightgreen;
 }
 
-main#content {
+#content {
     flex: 1 0;
     display: flex;
 }
 
 footer {
     text-align: center;
-}
-
-footer span {
     font-size: 0.8rem;
 }
