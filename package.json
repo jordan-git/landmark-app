@@ -1,0 +1,11 @@
+{
+    "name": "group-project",
+    "version": "0.1.0",
+    "description": "",
+    "scripts": {
+        "install": "composer require \"twig/twig\"",
+        "start": "php -S localhost:8000"
+    },
+    "author": "Raspberries",
+    "license": "ISC"
+}
