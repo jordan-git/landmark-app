@@ -3,6 +3,12 @@
 {% block css %}
     {{ parent() }}
     <link rel="stylesheet" href="../css/landing.css">
+    <link rel="stylesheet" href="../css/faq.css">
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script src="../js/helper.js" defer></script>
 {% endblock %}
 
 {% block title %}Home{% endblock %}
@@ -11,6 +17,36 @@
     <div id="landing">
         <h1><a href="/">WhatsThat</a></h1>
         <p>Something cool about our web application</p>
+        <div class="buttons">
+            <button id="upload-btn">Upload</button>
+            <button id="more-btn">More</button>
+        </div>
     </div>
     <!-- TODO: FAQ -->
+    <div class="frequently-asked-questions">
+        <div class="question-container">
+            <div class="question">
+                Who are we? Who are we? Who are we? Who are we?
+            </div>
+            <div class="answer">
+                Answer to the question Answer to the question Answer to the question
+            </div>
+        </div>
+        <div class="question-container">
+            <div class="question">
+                Who are we? Who are we? Who are we? Who are we?
+            </div>
+            <div class="answer">
+                Answer to the question Answer to the question Answer to the question
+            </div>
+        </div>
+        <div class="question-container">
+            <div class="question">
+                Who are we? Who are we? Who are we? Who are we?
+            </div>
+            <div class="answer">
+                Answer to the question Answer to the question Answer to the question
+            </div>
+        </div>
+    </div>
 {% endblock %}

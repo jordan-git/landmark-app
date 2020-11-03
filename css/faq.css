@@ -1,0 +1,22 @@
+.frequently-asked-questions {
+    margin: 0 auto;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.question-container {
+    display: flex;
+}
+
+.question-container div {
+    display: inline-block;
+}
+
+.question-container div:last-child {
+    margin-left: auto;
+}
+
+.question {
+    font-weight: bold;
+}

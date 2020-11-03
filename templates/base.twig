@@ -2,18 +2,18 @@
 <html>
     <head>
         {% block css %}
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/main.css" />
+            <link rel="stylesheet" href="../css/bootstrap.min.css">
+            <link rel="stylesheet" href="../css/main.css" />
         {% endblock %}
 
         {% block js %}
-        <script src="../js/bootstrap.min.js" defer></script>
+            <script src="../js/bootstrap.min.js" defer></script>
         {% endblock %}
 
         {% if block('title') is not empty  %}
-        <title>{% block title %}{% endblock %} - WhatsThat</title>
+            <title>{% block title %}{% endblock %} - WhatsThat</title>
         {% else %}
-        <title>WhatsThat</title>
+            <title>WhatsThat</title>
         {% endif %}
     </head>
     <body>
