@@ -18,8 +18,11 @@
         <h1><a href="/">WhatsThat</a></h1>
         <p>Something cool about our web application</p>
         <div class="buttons">
-            <button id="upload-btn">Upload</button>
-            <button id="more-btn">More</button>
+            <form action="/upload" method="post" onsubmit="event.preventDefault();">
+                <input type="file" accept=".jpg, .jpeg, .png" name="pic" id="pic">
+                <input type="submit" id="upload-btn" value="Upload"/>
+                <button id="more-btn">More</button>
+            </form>
         </div>
     </div>
     <!-- TODO: FAQ -->
