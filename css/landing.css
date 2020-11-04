@@ -24,17 +24,24 @@
 }
 
 #upload-btn,
-#more-btn {
+#more-btn,
+.btn {
     font-size: 100%;
     font-family: inherit;
     border: 2px solid #212529;
+    border-radius: 0;
     background: transparent;
     margin: 0 10px;
     padding: 8px 12px;
 }
 
+.btn:focus {
+    box-shadow: none;
+}
+
 #upload-btn:hover,
-#more-btn:hover {
+#more-btn:hover,
+.btn:hover {
     background: lightskyblue;
     transition: 0.1s ease-in-out;
 }
