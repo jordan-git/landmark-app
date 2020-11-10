@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 // Import Twig
 use Twig\Loader\FilesystemLoader;
@@ -15,8 +15,8 @@ $request_method = $_SERVER['REQUEST_METHOD'];
 
 if ($request_method === 'GET') {
     switch ($request_uri) {
-        case '' :
-        case '/' :
+        case '':
+        case '/':
             echo $twig->render('home.twig');
             break;
         case '/about':
@@ -25,7 +25,7 @@ if ($request_method === 'GET') {
     }
 } else if ($request_method === 'POST') {
     switch ($request_uri) {
-        case '/upload' :
+        case '/upload':
             // Add upload code here
             break;
     }

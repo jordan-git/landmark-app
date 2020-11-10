@@ -6,8 +6,9 @@
 
     https://thecodedeveloper.com/install-composer-windows-xampp/
 
-2. Run `npm install / npm run install`
-3. Run `npm start / npm run start`
+2. Open the terminal in the project root directory
+3. Run `npm install` to install dependencies
+4. Run `npm start` to host the server at `http://localhost:8000`
 
 ## Information
 
