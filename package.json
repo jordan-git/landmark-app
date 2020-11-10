@@ -4,7 +4,7 @@
     "description": "",
     "scripts": {
         "install": "composer install",
-        "start": "php src/php/create-database.php && cd src/public && php -S localhost:8000"
+        "start": "php src/php/create-db.php && cd src/public && php -S localhost:8000"
     },
     "author": "Raspberries",
     "license": "ISC"
