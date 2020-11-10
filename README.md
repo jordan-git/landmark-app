@@ -1,8 +1,8 @@
 ## How to run the project
 
-1. Install `php` and `Composer`
+1. Install `Node.js`, `php` and `Composer`
 
-    ##### XAMPP + Composer tutorial
+    ##### XAMPP (PHP) + Composer tutorial (optional but likely easier but more bloated)
 
     https://thecodedeveloper.com/install-composer-windows-xampp/
 
