@@ -13,6 +13,8 @@ $twig = new Environment($loader);
 $request_uri = $_SERVER['REQUEST_URI'];
 $request_method = $_SERVER['REQUEST_METHOD'];
 
+// if (in_array($request_uri, ['/index.php', '/.htaccess'])) echo $twig->render('home.twig');
+
 if ($request_method === 'GET') {
     switch ($request_uri) {
         case '':
@@ -21,6 +23,9 @@ if ($request_method === 'GET') {
             break;
         case '/about':
             echo $twig->render('about.twig');
+            break;
+        default:
+            echo $twig->render('404.twig');
             break;
     }
 } else if ($request_method === 'POST') {

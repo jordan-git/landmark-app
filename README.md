@@ -30,7 +30,7 @@ This folder contains all the files accessible to the user through the URL bar
 
 #### `src/public/.htaccess`
 
-This file is used to re-route all requests to `index.php`
+This file will not be used unless we are required to use an Apache web server
 
 #### `src/public/index.php`
 

@@ -1,3 +1,7 @@
+<FilesMatch "^(.htaccess|index.php)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
 RewriteEngine On
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-d
