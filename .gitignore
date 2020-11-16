@@ -1,2 +1,3 @@
 vendor/
 .prettierignore
+vision-key.json

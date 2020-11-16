@@ -15,7 +15,7 @@
 
 {% block content %}
     <div id="landing">
-        <h1><a href="/">WhatsThat</a></h1>
+        <h1><a href="/">WhatsThis</a></h1>
         <p>Something cool about our web application</p>
         <div class="buttons">
             <form action="/upload" method="post" onsubmit="event.preventDefault();">
@@ -26,39 +26,11 @@
                       More
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">FAQ</a>
+                        <a class="dropdown-item" href="#">About Us</a>
                     </div>
-                  </div>
+                </div>
             </form>
-        </div>
-    </div>
-    <!-- TODO: FAQ, either here or on separate page -->
-    <div class="frequently-asked-questions">
-        <div class="question-container">
-            <div class="question">
-                Who are we? Who are we? Who are we? Who are we?
-            </div>
-            <div class="answer">
-                Answer to the question Answer to the question Answer to the question
-            </div>
-        </div>
-        <div class="question-container">
-            <div class="question">
-                Who are we? Who are we? Who are we? Who are we?
-            </div>
-            <div class="answer">
-                Answer to the question Answer to the question Answer to the question
-            </div>
-        </div>
-        <div class="question-container">
-            <div class="question">
-                Who are we? Who are we? Who are we? Who are we?
-            </div>
-            <div class="answer">
-                Answer to the question Answer to the question Answer to the question
-            </div>
         </div>
     </div>
 {% endblock %}

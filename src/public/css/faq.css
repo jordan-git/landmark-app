@@ -1,8 +1,12 @@
-.frequently-asked-questions {
+.faq {
     margin: 0 auto;
-    width: 40%;
+    max-width: 1100px;
     display: flex;
     flex-direction: column;
+}
+
+h1 {
+    text-align: center;
 }
 
 .question-container {

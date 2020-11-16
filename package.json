@@ -4,7 +4,9 @@
     "description": "",
     "scripts": {
         "install": "composer install",
-        "start": "php src/php/create-db.php && php -S localhost:8000 -t src/public"
+        "create-db": "php src/php/create-db.php",
+        "start-server": "php -S localhost:8000 -t src/public",
+        "start": "npm run create-db && set GOOGLE_APPLICATION_CREDENTIALS=%CD%/vision-key.json && npm run start-server"
     },
     "author": "Raspberries",
     "license": "ISC"

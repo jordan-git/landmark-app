@@ -1,0 +1,15 @@
+{% extends "base.twig" %}
+
+{% block css %}
+    {{ parent() }}
+    <link rel="stylesheet" href="css/about-us.css">
+{% endblock %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+    <div class="about-us">
+        <h1>About Us</h1>
+        <p>Welcome to our about page. Here we will include information about us and why we made this project.</p>
+    </div>
+{% endblock %}

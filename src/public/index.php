@@ -21,8 +21,14 @@ if ($request_method === 'GET') {
         case '/':
             echo $twig->render('home.twig');
             break;
-        case '/about':
-            echo $twig->render('about.twig');
+        case '/about-us':
+            echo $twig->render('about-us.twig');
+            break;
+        case '/faq':
+            echo $twig->render('faq.twig');
+            break;
+        case '/detect':
+            require __DIR__ . '/../php/detect-landmark.php';
             break;
         default:
             echo $twig->render('404.twig');

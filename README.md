@@ -2,13 +2,12 @@
 
 1. Install `Node.js`, `PHP` and `Composer`
 
-    ##### XAMPP (PHP) + Composer tutorial (optional and likely easier but more bloated)
+    ###### [XAMPP (PHP) + Composer tutorial (optional and likely easier but more bloated)](https://thecodedeveloper.com/install-composer-windows-xampp/)
 
-    https://thecodedeveloper.com/install-composer-windows-xampp/
-
-2. Open the terminal in the project root directory
-3. Run `npm install` to install dependencies
-4. Run `npm start` to host the server at `http://localhost:8000`
+2. Follow steps 1 to 4 of [this guide](https://cloud.google.com/vision/docs/quickstart-client-libraries#before-you-begin) and save the file in the root directory named `vision-key.json`
+3. Open the terminal in the project root directory
+4. Run `npm install` to install dependencies
+5. Run `npm start` to host the server at `http://localhost:8000`
 
 ## Information
 
