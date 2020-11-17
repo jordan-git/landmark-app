@@ -29,7 +29,10 @@ function detect_landmark($path)
 
         $sql = 'SELECT * FROM landmarks WHERE landmark_name = ?';
 
+        // Prepare query
         $query = $conn->prepare($sql);
+
+        // Add variable to query in the position of '?'
         $query->bind_param("s", $name);
         $query->execute();
 

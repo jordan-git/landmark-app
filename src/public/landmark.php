@@ -16,21 +16,21 @@ if (($_FILES['pic']['name'] != "")) {
 
     $target_dir = __DIR__ . '/../images/';
 
-    // randomize file name once uploaded using timestamp
+    // Randomize file name once uploaded using timestamp
     $unique_name = md5($path['filename'] . time());
     $ext = $path['extension'];
 
     $temp_name = $_FILES['pic']['tmp_name'];
 
-    // uploaded image new name/path
+    // Uploaded image new name/path
     $path_filename_ext = $target_dir . $unique_name . "." . $ext;
 
-    // move to images folder
+    // Move to images folder
     move_uploaded_file($temp_name, $path_filename_ext);
 
     $landmark = detect_landmark($path_filename_ext);
 
-    // delete uploaded image
+    // Delete uploaded image
     unlink($path_filename_ext);
 
     if (!$landmark) {
