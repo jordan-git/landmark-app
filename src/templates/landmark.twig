@@ -1,0 +1,26 @@
+{% extends "base.twig" %}
+
+{% block css %}
+    {{ parent() }}
+    <link rel="stylesheet" href="css/landmark.css">
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script defer src="js/helper.js"></script>
+    <script defer src="js/landmark.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEzgEQSqTtplVhWWJoxo-CitPU0j2ds3k&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+
+{% endblock %}
+
+{% block title %}{{ name }}{% endblock %}
+
+{% block content %}
+    <div class="landmark" data-title="{{ name }}" data-lat="{{ lat }}" data-lng="{{ lng }}">
+        <h1>{{ name }}</h1>
+        <div id="map"></div>
+    </div>
+{% endblock %}

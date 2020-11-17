@@ -1,6 +1,6 @@
 <?php
 // Create a connection to the landmarks-app database and return it
-function openConnection($db)
+function openConnection()
 {
     $dbhost = "localhost";
     $dbuser = "root";

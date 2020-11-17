@@ -9,5 +9,6 @@
         "start": "npm run create-db && set GOOGLE_APPLICATION_CREDENTIALS=%CD%/vision-key.json && npm run start-server"
     },
     "author": "Raspberries",
-    "license": "ISC"
+    "license": "ISC",
+    "devDependencies": {}
 }

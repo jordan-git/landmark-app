@@ -1,26 +1,42 @@
 <?php
 
 require __DIR__ . '/../../vendor/autoload.php';
+require __DIR__ . '/../php/db-connection.php';
 
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 
-// $path = 'path/to/your/image.jpg1'
 
 function detect_landmark($path)
 {
     $imageAnnotator = new ImageAnnotatorClient();
+    $conn = openConnection();
 
-    # annotate the image
     $image = file_get_contents($path);
     $response = $imageAnnotator->landmarkDetection($image);
     $landmarks = $response->getLandmarkAnnotations();
 
-    printf('%d landmark found:' . PHP_EOL, count($landmarks));
+    $imageAnnotator->close();
+
+    // $landmarks = ['Spire of Dublin', 'Statue'];
+
     foreach ($landmarks as $landmark) {
-        print($landmark->getDescription() . PHP_EOL);
+        $name = $landmark->getDescription();
+
+        // $name = $landmark;
+
+        $sql = 'SELECT * FROM landmarks WHERE landmark_name = ?';
+
+        $query = $conn->prepare($sql);
+        $query->bind_param("s", $name);
+        $query->execute();
+
+        $result = $query->get_result();
+        if ($result->num_rows === 0) continue;
+
+        closeConnection($conn);
+        return $result->fetch_row();
     }
 
-    $imageAnnotator->close();
+    closeConnection($conn);
+    return false;
 }
-
-detect_landmark(__DIR__ . '/../images/spire.jpg');
