@@ -4,6 +4,7 @@
 function initMap() {
     const dataElement = document.querySelector('.landmark');
 
+    // Get data from data attributes attached to element from database through Twig template
     const title = dataElement.dataset.title;
     const lat = Number(dataElement.dataset.lat);
     const lng = Number(dataElement.dataset.lng);

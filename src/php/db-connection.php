@@ -11,9 +11,3 @@ function openConnection()
 
     return $conn;
 }
-
-// Close the landmarks-app MySQL connection
-function closeConnection($conn)
-{
-    $conn->close();
-}

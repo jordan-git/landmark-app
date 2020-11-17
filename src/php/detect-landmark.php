@@ -8,13 +8,16 @@ use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 
 function detect_landmark($path)
 {
+    // Create image reader and connect to database
     $imageAnnotator = new ImageAnnotatorClient();
     $conn = openConnection();
 
+    // Read image, submit to API and read landmark data response
     $image = file_get_contents($path);
     $response = $imageAnnotator->landmarkDetection($image);
     $landmarks = $response->getLandmarkAnnotations();
 
+    // Close image reader connection
     $imageAnnotator->close();
 
     // $landmarks = ['Spire of Dublin', 'Statue'];
@@ -33,10 +36,10 @@ function detect_landmark($path)
         $result = $query->get_result();
         if ($result->num_rows === 0) continue;
 
-        closeConnection($conn);
+        $conn->close();
         return $result->fetch_row();
     }
 
-    closeConnection($conn);
+    $conn->close();
     return false;
 }
