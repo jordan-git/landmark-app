@@ -18,7 +18,7 @@
         <h1><a href="/">WhatsThis</a></h1>
         <p>Something cool about our web application</p>
         <div class="buttons">
-            <form action="/upload" method="post" onsubmit="event.preventDefault();">
+            <form action="landmark.php" method="post" enctype="multipart/form-data">
                 <input type="file" accept=".jpg, .jpeg, .png" name="pic" id="pic">
                 <input type="submit" id="upload-btn" value="Upload"/>
                 <div class="dropdown">

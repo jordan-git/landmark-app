@@ -5,9 +5,10 @@
     ###### [XAMPP (PHP) + Composer tutorial (optional and likely easier but more bloated)](https://thecodedeveloper.com/install-composer-windows-xampp/)
 
 2. Follow steps 1 to 4 of [this guide](https://cloud.google.com/vision/docs/quickstart-client-libraries#before-you-begin) and save the file in the root directory named `vision-key.json`
-3. Open the terminal in the project root directory
-4. Run `npm install` to install dependencies
-5. Run `npm start` to host the server at `http://localhost:8000`
+3. Follow [this guide](https://developers.google.com/maps/documentation/javascript/adding-a-google-map#step_3_get_an_api_key) to generate a Google Maps API key and add it to the script tag in `landmark.twig` replacing the text `API_KEY_HERE`.
+4. Open the terminal in the project root directory
+5. Run `npm install` to install dependencies
+6. Run `npm start` to host the server at `http://localhost:8000`
 
 ## Information
 

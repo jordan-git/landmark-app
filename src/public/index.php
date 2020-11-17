@@ -28,16 +28,6 @@ if ($request_method === 'GET') {
         case '/faq':
             echo $twig->render('faq.twig');
             break;
-        case '/detect':
-            $landmark = detect_landmark(__DIR__ . '/../images/spire.jpg');
-
-            if (!$landmark) {
-                echo $twig->render('404.twig');
-                return;
-            }
-
-            echo $twig->render('landmark.twig', ['name' => $landmark[1], 'lat' => $landmark[2], 'lng' => $landmark[3]]);
-            break;
         default:
             echo $twig->render('404.twig');
             break;

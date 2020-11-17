@@ -10,7 +10,7 @@ function initMap() {
 
     const landmarkCoordinates = { lat, lng };
 
-    const map = new google.maps.Map(document.getElementById('map'), {
+    const map = new google.maps.Map(document.querySelector('#map'), {
         zoom: 12,
         center: landmarkCoordinates,
     });
