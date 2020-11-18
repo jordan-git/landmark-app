@@ -1,4 +1,17 @@
 #map {
-    width: 600px;
-    height: 400px;
+    margin: 0 auto;
+    width: 80%;
+    height: 300px;
+}
+
+.landmark h1 {
+    text-align: center;
+}
+
+.landmark-flex {
+    display: flex;
+}
+
+.landmark-flex > * {
+    flex: 1;
 }
