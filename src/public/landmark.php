@@ -34,5 +34,8 @@ if (($_FILES['pic']['name'] != "")) {
         return;
     }
 
-    echo $twig->render('landmark.twig', ['name' => $landmark[1], 'lat' => $landmark[2], 'lng' => $landmark[3]]);
+    // Read file related to landmark in data folder and separate new lines into array
+    $desc = explode("\n", file_get_contents(__DIR__ . $landmark[4]));
+
+    echo $twig->render('landmark.twig', ['name' => $landmark[1], 'lat' => $landmark[2], 'lng' => $landmark[3], 'desc' => $desc]);
 }
