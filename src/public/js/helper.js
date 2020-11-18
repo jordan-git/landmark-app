@@ -2,17 +2,13 @@
  * Initialize the map for the current landmark.
  */
 function initMap() {
-    const dataElement = document.querySelector('.landmark');
-
     // Get data from data attributes attached to element from database through Twig template
-    const title = dataElement.dataset.title;
-    const lat = Number(dataElement.dataset.lat);
-    const lng = Number(dataElement.dataset.lng);
-
-    const landmarkCoordinates = { lat, lng };
+    const dataElement = document.querySelector('.landmark');
+    const { title, lat, lng } = dataElement.dataset;
+    const landmarkCoordinates = { lat: Number(lat), lng: Number(lng) };
 
     const map = new google.maps.Map(document.querySelector('#map'), {
-        zoom: 12,
+        zoom: 15,
         center: landmarkCoordinates,
     });
 

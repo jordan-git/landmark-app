@@ -5,7 +5,9 @@
     <link rel="stylesheet" href="css/404.css">
 {% endblock %}
 
-{% block title %}Page Not Found{% endblock %}
+{% set title = "Page Not Found" %}
+
+{% set showNav = true %}
 
 {% block content %}
     <div class="not-found">

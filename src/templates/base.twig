@@ -12,13 +12,22 @@
             <script src="js/bootstrap.bundle.min.js" defer></script>
         {% endblock %}
 
-        {% if block('title') is not empty  %}
-            <title>{% block title %}{% endblock %} - WhatsThis</title>
+        {% if title is defined  %}
+            <title>{{ title }} - WhatsThis</title>
         {% else %}
             <title>WhatsThis</title>
         {% endif %}
     </head>
     <body>
+        {% if showNav == true  %}
+            <header>
+                <nav>
+                    <a href="/">Home</a>
+                    <a href="/faq">FAQ</a>
+                    <a href="/about-us">About Us</a>
+                </nav>
+            </header>
+        {% endif %}
         <main id="content">{% block content %}{% endblock %}</main>
         <footer>
             <span>&copy; Copyright 2020 by Team Raspberries</span>

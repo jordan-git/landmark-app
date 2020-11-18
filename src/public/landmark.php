@@ -1,14 +1,10 @@
 <?php
 require __DIR__ . '/../../vendor/autoload.php';
-require __DIR__ . '/../php/detect-landmark.php';
-
-// Import Twig
-use Twig\Loader\FilesystemLoader;
-use Twig\Environment;
+require __DIR__ . '/../php/detect.php';
+require __DIR__ . '/../php/twig.php';
 
 // Set up Twig
-$loader = new FilesystemLoader(__DIR__ . '/../templates');
-$twig = new Environment($loader);
+$twig = setupTwig();
 
 if (($_FILES['pic']['name'] != "")) {
     $file = $_FILES['pic']['name'];

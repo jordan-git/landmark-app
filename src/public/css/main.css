@@ -15,6 +15,31 @@ body {
     margin: 0 20px;
 }
 
+nav {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+nav a,
+nav a:hover {
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: rgb(0, 217, 255);
+}
+
+nav a {
+    transition: 0.2s;
+    padding: 14px 20px;
+    color: inherit;
+}
+
+nav a:nth-child(2) {
+    margin-left: auto;
+}
+
 footer {
     text-align: center;
     font-size: 0.8rem;

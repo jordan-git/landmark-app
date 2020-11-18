@@ -1,6 +1,5 @@
 vendor/
 .prettierignore
 vision-key.json
-src/images/*
+src/cache
 response.json
-.env
