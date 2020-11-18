@@ -36,6 +36,7 @@ if (($_FILES['pic']['name'] != "")) {
 
     // Read file related to landmark in data folder and separate new lines into array
     $desc = explode("\n", file_get_contents(__DIR__ . $landmark[4]));
+    $maps_api_key = file_get_contents(__DIR__ . '/../../.env');
 
-    echo $twig->render('landmark.twig', ['name' => $landmark[1], 'lat' => $landmark[2], 'lng' => $landmark[3], 'desc' => $desc]);
+    echo $twig->render('landmark.twig', ['name' => $landmark[1], 'lat' => $landmark[2], 'lng' => $landmark[3], 'desc' => $desc, 'mapsKey' => $maps_api_key]);
 }

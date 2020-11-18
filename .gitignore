@@ -3,3 +3,4 @@ vendor/
 vision-key.json
 src/cache
 response.json
+.env
