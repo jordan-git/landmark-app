@@ -24,18 +24,30 @@ This command will host the server at `http://localhost:8000`
 
 This folder contains all the files related to the project, to separate them from other dependency files
 
-#### `src/public`
+#### `cache`
 
-This folder contains all the files accessible to the user through the URL bar
+This folder contains the generated Twig files so the application doesn't need to re-render previously visited pages
 
-#### `src/public/index.php`
+#### `data`
 
-This file is used as a router to route the user to the requested resource from a central place
+This folder contains text files with data on each landmark. The path to the file is saved in the database and the file is loaded when required
 
-#### `src/templates`
+#### `images`
+
+This folder contains images of supported landmarks to help with testing
+
+#### `php`
+
+This folder contains all of the PHP code for the backend
+
+#### `public`
+
+This folder contains all the files accessible to the user through the browser
+
+#### `sql`
+
+This folder contains all of the SQL files
+
+#### `templates`
 
 This folder contains all the `Twig` templates used to generate dynamic HTML files
-
-#### `src/templates/base.twig`
-
-This file is the base twig file containing the main page layout which all our other files extend from and insert into using blocks
