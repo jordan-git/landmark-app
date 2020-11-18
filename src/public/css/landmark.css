@@ -8,10 +8,6 @@
     text-align: center;
 }
 
-.landmark-flex {
-    display: flex;
-}
-
-.landmark-flex > * {
+.landmark-container > * {
     flex: 1;
 }
