@@ -5,7 +5,7 @@
     ###### [XAMPP (PHP) + Composer tutorial (optional and likely easier but more bloated)](https://thecodedeveloper.com/install-composer-windows-xampp/)
 
 2. Follow steps 1 to 4 of [this guide](https://cloud.google.com/vision/docs/quickstart-client-libraries#before-you-begin) and save the file in the root directory named `vision-key.json`
-3. Follow [this guide](https://developers.google.com/maps/documentation/javascript/adding-a-google-map#step_3_get_an_api_key) to generate a Google Maps API key and then create a file in the root directory called `.env` and place it there
+3. Follow [this guide](https://developers.google.com/maps/documentation/javascript/adding-a-google-map#step_3_get_an_api_key) to generate a Google Maps API key and then create a file in the root directory called `.env` and place it there in the format `MAPS_API_KEY=<generated API key>`
 4. Open the terminal in the project root directory
 5. Run `npm install` to install dependencies
 6. Run `npm start` to host the server at `http://localhost:8000`
@@ -14,11 +14,11 @@
 
 #### `npm run install`
 
-This command will install the required libraries (Twig)
+This command will install the required libraries (Twig and Google Vision)
 
 #### `npm run start`
 
-This command will host the server at `localhost:8000`
+This command will host the server at `http://localhost:8000`
 
 #### `src`
 
@@ -27,10 +27,6 @@ This folder contains all the files related to the project, to separate them from
 #### `src/public`
 
 This folder contains all the files accessible to the user through the URL bar
-
-#### `src/public/.htaccess`
-
-This file will not be used unless we are required to use an Apache web server
 
 #### `src/public/index.php`
 
