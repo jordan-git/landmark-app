@@ -1,5 +1,8 @@
 {% extends "base.twig" %}
 
+{% set title = name %}
+{% set showNav = true %}
+
 {% block css %}
     {{ parent() }}
     <link rel="stylesheet" href="css/landmark.css">
@@ -13,10 +16,6 @@
       defer
     ></script>
 {% endblock %}
-
-{% set title = name %}
-
-{% set showNav = true %}
 
 {% block content %}
     <div class="landmark" data-title="{{ name }}" data-lat="{{ lat }}" data-lng="{{ lng }}">

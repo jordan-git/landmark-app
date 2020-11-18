@@ -1,13 +1,12 @@
 {% extends "base.twig" %}
 
+{% set title = "Page Not Found" %}
+{% set showNav = true %}
+
 {% block css %}
     {{ parent() }}
     <link rel="stylesheet" href="css/404.css">
 {% endblock %}
-
-{% set title = "Page Not Found" %}
-
-{% set showNav = true %}
 
 {% block content %}
     <div class="not-found">

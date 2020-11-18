@@ -66,7 +66,7 @@ function read_env()
     $file = fopen(__DIR__ . '/../../.env', 'r');
 
     if ($file) {
-        while(($line = fgets($file)) !== false) {
+        while (($line = fgets($file)) !== false) {
             $split_line = explode('=', $line);
             $env_array[$split_line[0]] = $split_line[1];
         }
