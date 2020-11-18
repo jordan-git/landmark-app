@@ -50,4 +50,4 @@ This folder contains all of the SQL files
 
 #### `templates`
 
-This folder contains all the `Twig` templates used to generate dynamic HTML files
+This folder contains all the Twig templates used to generate dynamic HTML files

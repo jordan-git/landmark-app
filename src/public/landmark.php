@@ -1,11 +1,9 @@
 <?php
 require __DIR__ . '/../../vendor/autoload.php';
-require __DIR__ . '/../php/detect.php';
-require __DIR__ . '/../php/twig.php';
-require __DIR__ . '/../php/read-env.php';
+require __DIR__ . '/../php/helper.php';
 
 // Set up Twig
-$twig = setupTwig();
+$twig = setup_twig();
 
 if (($_FILES['pic']['name'] != "")) {
     $file = $_FILES['pic']['name'];
@@ -40,4 +38,4 @@ if (($_FILES['pic']['name'] != "")) {
     $maps_api_key = read_env()['MAPS_API_KEY'];
 
     echo $twig->render('landmark.twig', ['name' => $landmark[1], 'lat' => $landmark[2], 'lng' => $landmark[3], 'desc' => $desc, 'mapsKey' => $maps_api_key]);
-}
+} else echo "No file selected"; // TODO: handle no file selected properly

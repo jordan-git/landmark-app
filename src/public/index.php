@@ -1,9 +1,9 @@
 <?php
 require __DIR__ . '/../../vendor/autoload.php';
-require __DIR__ . '/../php/twig.php';
+require __DIR__ . '/../php/helper.php';
 
 // Set up Twig
-$twig = setupTwig();
+$twig = setup_twig();
 
 // Reroute to specific Twig page depending on requested route
 $request_uri = $_SERVER['REQUEST_URI'];
