@@ -10,6 +10,8 @@ function read_env()
             $split_line = explode('=', $line);
             $env_array[$split_line[0]] = $split_line[1];
         }
+
+        fclose($file);
     }
 
     return $env_array;
