@@ -23,14 +23,18 @@
         <section class="landmark-container flex">
             <aside>
                 <div class="links">
-                    <a>Link</a>
-                    <a>Link</a>
-                    <a>Link</a>
+                    <ul>
+                        <li><a>Link</a></li>
+                        <li><a>Link</a></li>
+                        <li><a>Link</a></li>
+                    </ul>
                 </div>
-                <audio controls>
-                    <source src="audio/{{ audio }}" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
+                <div class="audio">
+                    <audio controls>
+                        <source src="audio/{{ audio }}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
             </aside>
             <section>
                 {% for paragraph in desc %}

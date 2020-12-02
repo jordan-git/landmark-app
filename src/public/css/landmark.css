@@ -11,3 +11,13 @@
 .landmark-container > * {
     flex: 1;
 }
+
+.links ul {
+    list-style-type: none;
+}
+
+.audio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
