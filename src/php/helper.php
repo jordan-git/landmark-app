@@ -30,7 +30,7 @@ function detect_landmark($path)
     // Close image reader connection
     // $imageAnnotator->close();
 
-    $landmarks = ['Spire of Dublin', 'Statue'];
+    $landmarks = ['General Post Office', 'Statue'];
 
     foreach ($landmarks as $landmark) {
         // $name = $landmark->getDescription();
