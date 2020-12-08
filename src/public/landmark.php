@@ -45,5 +45,5 @@ if (($_FILES['pic']['name'] != "")) {
 
     $maps_api_key = read_env()['MAPS_API_KEY'];
 
-    echo $twig->render('landmark.twig', ['name' => $landmark[1], 'lat' => $landmark[2], 'lng' => $landmark[3], 'desc' => $desc, 'mapsKey' => $maps_api_key, 'links' => $links, 'audio' => $landmark[6]]);
+    echo $twig->render('landmark.twig', ['name' => $landmark[1], 'lat' => $landmark[2], 'lng' => $landmark[3], 'desc' => $desc, 'mapsKey' => $maps_api_key, 'links' => $links, 'audio' => $landmark[6], 'img' => $landmark[7]]);
 } else echo "No file selected"; // TODO: handle no file selected properly

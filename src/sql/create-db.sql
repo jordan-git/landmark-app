@@ -11,9 +11,10 @@ CREATE TABLE `landmark-app`.`landmarks` (
   landmark_lon FLOAT NOT NULL,
   landmark_desc VARCHAR(40) NOT NULL,
   landmark_links VARCHAR(40) NOT NULL,
-  landmark_audio VARCHAR(40) NOT NULL
+  landmark_audio VARCHAR(40) NOT NULL,
+  landmark_image VARCHAR(40) NOT NULL
 );
 
 -- Insert a test value
-INSERT INTO `landmark-app`.`landmarks` (landmark_name, landmark_lat, landmark_lon, landmark_desc, landmark_links, landmark_audio)
-VALUES ('Spire of Dublin', 53.349796, -6.260265, 'spire-desc.txt', 'spire-links.txt', 'spire.mp3');
+INSERT INTO `landmark-app`.`landmarks` (landmark_name, landmark_lat, landmark_lon, landmark_desc, landmark_links, landmark_audio, landmark_image)
+VALUES ('Spire of Dublin', 53.349796, -6.260265, 'spire-desc.txt', 'spire-links.txt', 'spire.mp3', 'spire.jpg');
