@@ -12,12 +12,27 @@
     flex: 1;
 }
 
+.description {
+    font-size: 0.8em;
+}
+
+.links {
+    margin-top: 50px;
+}
+
+.links > h2 {
+    text-align: center;
+}
+
 .links ul {
+    padding: 0;
     list-style-type: none;
+    text-align: center;
 }
 
 .audio {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }

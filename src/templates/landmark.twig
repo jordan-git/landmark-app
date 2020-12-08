@@ -22,21 +22,23 @@
         <h1>{{ name }}</h1>
         <section class="landmark-container flex">
             <aside>
+                <div class="audio">
+                    <h2>Audio Description</h2>
+                    <audio controls>
+                        <source src="audio/{{ audio }}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
                 <div class="links">
+                    <h2>Links</h2>
                     <ul>
                         {% for link in links %}
                             <li><a href="{{ link[1] }}">{{ link[0] }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="audio">
-                    <audio controls>
-                        <source src="audio/{{ audio }}" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
             </aside>
-            <section>
+            <section class="description">
                 {% for paragraph in desc %}
                     <p>{{ paragraph }}</p>
                 {% endfor %}
