@@ -29,7 +29,7 @@ if (($_FILES['pic']['name'] != "")) {
     unlink($path_filename_ext);
 
     if (!$landmark) {
-        echo $twig->render('404.twig'); // TODO: replace with landmark not identified page
+        echo $twig->render('home.twig', ['notFound' => $landmark[1]]);
         return;
     }
 
@@ -46,4 +46,4 @@ if (($_FILES['pic']['name'] != "")) {
     $maps_api_key = read_env()['MAPS_API_KEY'];
 
     echo $twig->render('landmark.twig', ['name' => $landmark[1], 'lat' => $landmark[2], 'lng' => $landmark[3], 'desc' => $desc, 'mapsKey' => $maps_api_key, 'links' => $links, 'audio' => $landmark[6], 'img' => $landmark[7]]);
-} else echo "No file selected"; // TODO: handle no file selected properly
+}

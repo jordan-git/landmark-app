@@ -40,6 +40,11 @@ nav a:nth-child(2) {
     margin-left: auto;
 }
 
+#landmark-not-found {
+    color: red;
+    margin-bottom: 50px;
+}
+
 footer {
     text-align: center;
     font-size: 0.8rem;

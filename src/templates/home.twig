@@ -15,11 +15,14 @@
 
 {% block content %}
     <div id="landing">
+        {% if notFound == true  %}
+            <h1 id="landmark-not-found">Landmark Not Found</h1>
+        {% endif %}
         <h1><a href="/">WhatsThis</a></h1>
         <p>Something cool about our web application</p>
         <div class="buttons">
             <form action="landmark.php" method="post" enctype="multipart/form-data">
-                <input type="file" accept=".jpg, .jpeg, .png" name="pic" id="pic">
+                <input type="file" accept=".jpg, .jpeg, .png" name="pic" id="pic" required>
                 <input type="submit" id="upload-btn" value="Upload"/>
                 <div class="dropdown">
                     <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

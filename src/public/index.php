@@ -24,13 +24,7 @@ if ($request_method === 'GET') {
             echo $twig->render('faq.twig');
             break;
         default:
-            echo $twig->render('404.twig');
-            break;
-    }
-} else if ($request_method === 'POST') {
-    switch ($request_uri) {
-        case '/upload':
-            // Add upload code here
+            echo $twig->render('home.twig', ['notFound' => true]);; // change to 404.twig
             break;
     }
 }
