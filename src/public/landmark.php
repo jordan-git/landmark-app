@@ -35,7 +35,15 @@ if (($_FILES['pic']['name'] != "")) {
 
     // Read file related to landmark in data folder and separate new lines into array
     $desc = explode("\n", file_get_contents(__DIR__ . '/../data/' . $landmark[4]));
+    $link_lines = explode("\n", file_get_contents(__DIR__ . '/../data/' . $landmark[5]));
+    $links = array();
+
+    foreach ($link_lines as $line) {
+        $split_line = explode("|", $line);
+        array_push($links, array($split_line[0], $split_line[1]));
+    }
+
     $maps_api_key = read_env()['MAPS_API_KEY'];
 
-    echo $twig->render('landmark.twig', ['name' => $landmark[1], 'lat' => $landmark[2], 'lng' => $landmark[3], 'desc' => $desc, 'mapsKey' => $maps_api_key, 'audio' => $landmark[5]]);
+    echo $twig->render('landmark.twig', ['name' => $landmark[1], 'lat' => $landmark[2], 'lng' => $landmark[3], 'desc' => $desc, 'mapsKey' => $maps_api_key, 'links' => $links, 'audio' => $landmark[6]]);
 } else echo "No file selected"; // TODO: handle no file selected properly

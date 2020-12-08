@@ -24,9 +24,9 @@
             <aside>
                 <div class="links">
                     <ul>
-                        <li><a>Link</a></li>
-                        <li><a>Link</a></li>
-                        <li><a>Link</a></li>
+                        {% for link in links %}
+                            <li><a href="{{ link[1] }}">{{ link[0] }}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="audio">
