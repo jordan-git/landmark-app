@@ -11,29 +11,69 @@
 {% block content %}
 <div class="faq">
     <h1>Frequently Asked Questions</h1>
-    <div class="question-container">
-        <div class="question">
-            Who are we? Who are we? Who are we? Who are we?
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    My photo did not create a match with the landmark?
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Due to current covid-19 restrictions we are having issues with growing our application.
+                    Please check back in the future.
+                    Ensure the landmark is well photographed and in good lighting.
+                </div>
+            </div>
         </div>
-        <div class="answer">
-            Answer to the question Answer to the question Answer to the question
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    My App crashed and won't work?
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Please restart the application.If this doesnt work visit the contact page and please let us know</div>
+            </div>
         </div>
-    </div>
-    <div class="question-container">
-        <div class="question">
-            Who are we? Who are we? Who are we? Who are we?
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    The audio clip wont play?
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Please restart the application.If your still experiencing issues, please let us know.</div>
+            </div>
         </div>
-        <div class="answer">
-            Answer to the question Answer to the question Answer to the question
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                    I uploaded the wrong image,where is it stored?
+                </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">All images are automatically deleted once processed,we do not hold any images taken by users in our database.</div>
+            </div>
         </div>
-    </div>
-    <div class="question-container">
-        <div class="question">
-            Who are we? Who are we? Who are we? Who are we?
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                    The photo I took matched the wrong landmark?
+                </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">The application is still in its infancy stages,We would greatly appreciate you let us know by emailing whatsthis@gmail.com.</div>
+            </div>
         </div>
-        <div class="answer">
-            Answer to the question Answer to the question Answer to the question
-        </div>
-    </div>
 </div>
 {% endblock %}
