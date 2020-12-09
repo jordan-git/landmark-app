@@ -58,3 +58,28 @@ body {
     background: url('/images/background.jpg');
     background-size: cover;
 }
+
+#title,
+form,
+footer {
+    opacity: 0;
+}
+
+#title.transition {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+form.transition {
+    opacity: 1;
+    transition: opacity 1s ease 500ms;
+}
+
+footer.transition {
+    opacity: 1;
+    transition: opacity 1s ease 1s;
+}
+
+footer {
+    background: none;
+}

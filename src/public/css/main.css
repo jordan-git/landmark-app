@@ -8,6 +8,11 @@ body {
     min-height: 100vh;
 }
 
+header {
+    color: white;
+    background: #333;
+}
+
 #content {
     flex: 1 0;
     display: flex;
@@ -45,6 +50,9 @@ nav a:nth-child(2) {
 }
 
 footer {
+    padding: 10px 0;
+    background: #333;
+    color: white;
     text-align: center;
     font-size: 0.8rem;
 }

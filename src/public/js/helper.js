@@ -18,3 +18,11 @@ function initMap() {
         title,
     });
 }
+
+if (location.pathname === '/') {
+    window.addEventListener('load', () => {
+        document.querySelector('#title').classList.add('transition');
+        document.querySelector('form').classList.add('transition');
+        document.querySelector('footer').classList.add('transition');
+    });
+}
