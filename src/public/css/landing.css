@@ -9,9 +9,6 @@
 #landing a {
     color: inherit;
     text-decoration: none;
-    background-image: url('');
-    background-size: cover;
-    filter: brightness(40%);
 }
 
 .buttons form {
@@ -28,9 +25,10 @@
 #upload-btn,
 #more-btn,
 .btn {
+    color: white;
     font-size: 100%;
     font-family: inherit;
-    border: 2px solid #212529;
+    border: 2px solid #ffffff;
     border-radius: 0;
     background: transparent;
     margin: 0 10px;
@@ -44,6 +42,19 @@
 #upload-btn:hover,
 #more-btn:hover,
 .btn:hover {
-    background: lightskyblue;
+    color: black;
+    background: white;
     transition: 0.1s ease-in-out;
+}
+
+.dropdown-item:hover {
+    color: white !important;
+    background: #747474;
+    transition: 0.1s ease-in-out;
+}
+
+body {
+    color: white !important;
+    background: url('/images/background.jpg');
+    background-size: cover;
 }
