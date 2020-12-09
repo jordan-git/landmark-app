@@ -21,6 +21,14 @@ h1 {
     flex: 50%;
 }
 
+.about-container p {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .about-container img {
+    padding: 30px;
     max-height: 350px;
 }
