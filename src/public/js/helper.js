@@ -19,7 +19,7 @@ function initMap() {
     });
 }
 
-if (location.pathname === '/') {
+if (location.pathname === '/' || location.pathname === '/landmark.php') {
     window.addEventListener('load', () => {
         document.querySelector('#title').classList.add('transition');
         document.querySelector('form').classList.add('transition');

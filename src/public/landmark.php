@@ -29,7 +29,7 @@ if (($_FILES['pic']['name'] != "")) {
     unlink($path_filename_ext);
 
     if (!$landmark) {
-        echo $twig->render('home.twig', ['notFound' => $landmark[1]]);
+        echo $twig->render('home.twig', ['notFound' => true]);
         return;
     }
 
