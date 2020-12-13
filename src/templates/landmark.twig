@@ -19,36 +19,34 @@
 
 {% block content %}
     <div class="landmark" data-title="{{ name }}" data-lat="{{ lat }}" data-lng="{{ lng }}">
-        <h1>{{ name }}</h1>
-        <div class="image">
-            <img src="images/{{ img }}" />
-        </div>
-        <section class="landmark-container flex">
-            <aside>
-                <div class="audio">
-                    <h2>Audio Description</h2>
-                    <audio controls>
-                        <source src="audio/{{ audio }}" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-                <div class="links">
-                    <h2>Links</h2>
-                    <ul>
-                        {% for link in links %}
-                            <li><a href="{{ link[1] }}">{{ link[0] }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </aside>
-            <section class="description">
-                {% for paragraph in desc %}
-                    <p>{{ paragraph }}</p>
-                {% endfor %}
-            </section>
-            <aside>
-                <div id="map"></div>
-            </aside>
+        <aside>
+            <div class="audio">
+                <h2>Audio Description</h2>
+                <audio controls>
+                    <source src="audio/{{ audio }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="links">
+                <h2>Links</h2>
+                <ul>
+                    {% for link in links %}
+                        <li><a href="{{ link[1] }}">{{ link[0] }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </aside>
+        <section class="description">
+            {% for paragraph in desc %}
+                <p>{{ paragraph }}</p>
+            {% endfor %}
         </section>
+        <aside>
+            <h1 class="title">{{ name }}</h1>
+            <div class="image">
+                <img src="images/{{ img }}" />
+            </div>
+            <div id="map"></div>
+        </aside>
     </div>
 {% endblock %}

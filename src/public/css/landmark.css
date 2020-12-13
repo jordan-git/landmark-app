@@ -1,29 +1,21 @@
-#map {
-    margin: 0 auto;
-    width: 80%;
-    height: 300px;
-}
-
-.landmark h1 {
-    text-align: center;
-}
-
-.image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
 .image img {
     max-height: 400px;
 }
 
+.landmark {
+    display: flex;
+}
 .landmark-container > * {
-    flex: 1;
+    flex-basis: 1fr;
+}
+
+aside,
+section {
+    padding: 15px;
 }
 
 .description {
+    margin-top: 30px;
     font-size: 0.8em;
 }
 
@@ -41,6 +33,16 @@
     text-align: center;
 }
 
+.audio h2,
+.links h2,
+.title {
+    font-size: 1.2rem;
+}
+
+.title {
+    text-align: center;
+}
+
 .audio {
     margin-top: 30px;
     display: flex;
@@ -50,5 +52,7 @@
 }
 
 #map {
-    margin-top: 30px;
+    margin: 30px auto 0;
+    width: 80%;
+    height: 300px;
 }
