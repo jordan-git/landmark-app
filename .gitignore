@@ -5,3 +5,5 @@ src/cache
 response.json
 .env
 *.old
+src/public/images/spire2.jpg
+src/public/images/spire1.jpg

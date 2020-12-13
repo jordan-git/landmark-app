@@ -19,23 +19,23 @@ function open_connection()
 function detect_landmark($path)
 {
     // Create image reader and connect to database
-    // $imageAnnotator = new  Google\Cloud\Vision\V1\ImageAnnotatorClient();
+    $imageAnnotator = new  Google\Cloud\Vision\V1\ImageAnnotatorClient();
     $conn = open_connection();
 
     // Read image, submit to API and read landmark data response
-    // $image = file_get_contents($path);
-    // $response = $imageAnnotator->landmarkDetection($image);
-    // $landmarks = $response->getLandmarkAnnotations();
+    $image = file_get_contents($path);
+    $response = $imageAnnotator->landmarkDetection($image);
+    $landmarks = $response->getLandmarkAnnotations();
 
     // Close image reader connection
-    // $imageAnnotator->close();
+    $imageAnnotator->close();
 
-    $landmarks = ['Spire of Dublin', 'Statue'];
+    // $landmarks = ['General Post Office', 'Statue'];
 
     foreach ($landmarks as $landmark) {
-        // $name = $landmark->getDescription();
+        $name = $landmark->getDescription();
 
-        $name = $landmark;
+        // $name = $landmark;
 
         $sql = 'SELECT * FROM landmarks WHERE landmark_name = ?';
 
@@ -82,8 +82,8 @@ function setup_twig()
 {
     $loader = new Twig\Loader\FilesystemLoader(__DIR__ . '/../templates');
 
-    // Remove auto reload after development to enable cache
-    $twig = new Twig\Environment($loader, ['cache' => __DIR__ . '/../cache', 'auto_reload' => true]);
+    // Remove auto reload after development to enable cache 'auto_reload' => true
+    $twig = new Twig\Environment($loader, ['cache' => __DIR__ . '/../cache']);
 
     return $twig;
 }

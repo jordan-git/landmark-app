@@ -9,7 +9,7 @@ if (($_FILES['pic']['name'] != "")) {
     $file = $_FILES['pic']['name'];
     $path = pathinfo($file);
 
-    $target_dir = __DIR__ . '/../images/';
+    $target_dir = __DIR__ . '/images/';
 
     // Randomize file name once uploaded using timestamp
     $unique_name = md5($path['filename'] . time());

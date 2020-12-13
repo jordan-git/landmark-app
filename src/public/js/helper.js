@@ -19,6 +19,7 @@ function initMap() {
     });
 }
 
+// Fade in elements on home/landing page
 if (location.pathname === '/' || location.pathname === '/landmark.php') {
     window.addEventListener('load', () => {
         document.querySelector('#title').classList.add('transition');
